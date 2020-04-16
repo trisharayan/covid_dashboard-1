@@ -15,10 +15,11 @@ export class ApiService {
 
   getTimelinedata():Observable<any>{
     return this.http.get(this.api_url+"timeline")
-
   }
 
-
+  getWorldCount():Observable<any>{
+    return this.http.get(this.api_url+"countries")
+  }
 
 
 }
