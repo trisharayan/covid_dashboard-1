@@ -1,20 +1,17 @@
-
-
 <section class='statis text-center'>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
         <div class="box bg-primary">
           <i class="fa fa-eye"></i>
-
-      <h3>  {{count["active"] | number}}</h3>
+          <h3> {{count["active"] | number}}</h3>
           <p class="lead">Active Cases</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="box danger">
           <i class="fa fa-user-o"></i>
-          <h3>  {{count["deaths"] | number}}</h3>
+          <h3> {{count["deaths"] | number}}</h3>
           <p class="lead">Deaths</p>
         </div>
       </div>
@@ -35,26 +32,8 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
 <div id="container"></div>
-
-
-
-
-
-
-
-
-
-
-
 <section class="worldCountTable">
-
   <table>
     <caption>World COVID count</caption>
     <thead>
@@ -65,15 +44,10 @@
         <th scope="col">Recovered</th>
         <th scope="col">Population</th>
         <th scope="col">Today</th>
-
-
-
       </tr>
     </thead>
     <tbody>
-
       <tr *ngFor="let country of worldcounttable">
-
         <td>{{country.name}}</td>
         <td>{{country.latest_data.confirmed | number}}</td>
         <td>{{country.latest_data.deaths | number}}</td>
@@ -81,17 +55,8 @@
         <td>{{country.population | number}}</td>
         <td>Deaths:{{country.today.deaths | number}}<br>
           Confirmed:{{country.today.confirmed | number}}
-
-
         </td>
-
-
-
       </tr>
-
     </tbody>
   </table>
-
 </section>
-
-
