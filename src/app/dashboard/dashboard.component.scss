@@ -1,6 +1,28 @@
-
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  h1 {
+    font-size: 25px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .option-container {
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 15px;
+      padding: 0 20px;
+    }
+  }
+}
 .statis {
-  color: #EEE;
+  color: #eee;
   margin-top: 15px;
 }
 .statis .box {
@@ -32,12 +54,18 @@
   text-align: right;
   border-radius: 50%;
 }
-.warning {background-color: #f0ad4e}
-.danger {background-color: #d9534f}
-.success {background-color: #5cb85c}
-.inf {background-color: #5bc0de}
-
-
+.warning {
+  background-color: #f0ad4e;
+}
+.danger {
+  background-color: #d9534f;
+}
+.success {
+  background-color: #5cb85c;
+}
+.inf {
+  background-color: #5bc0de;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -55,24 +83,24 @@ table {
 
 table caption {
   font-size: 1.5em;
-  margin: .5em 0 .75em;
+  margin: 0.5em 0 0.75em;
 }
 
 table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
-  padding: .35em;
+  padding: 0.35em;
 }
 
 table th,
 table td {
-  padding: .625em;
+  padding: 0.625em;
   text-align: center;
 }
 
 table th {
-  font-size: .85em;
-  letter-spacing: .1em;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -80,13 +108,14 @@ table tbody {
   display: block;
   max-height: 500px;
   overflow-y: scroll;
+ 
 }
 
 table thead,
 tbody tr {
-display: table;
-width: 100%;
-table-layout: fixed;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 @media screen and (max-width: 600px) {
@@ -112,13 +141,13 @@ table-layout: fixed;
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625em;
+    margin-bottom: 0.625em;
   }
 
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: right;
   }
 
@@ -136,6 +165,9 @@ table-layout: fixed;
   table td:last-child {
     border-bottom: 0;
   }
-
- 
+}
+.footer {
+  min-height: 50px;
+  background-color: #99999954;
+  margin-top: 25px;
 }

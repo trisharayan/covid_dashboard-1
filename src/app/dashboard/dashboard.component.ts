@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
 
   constructor(private service: ApiService) { }
 
-
   count = {
     updated_at: "",
     deaths: "",
@@ -21,9 +20,6 @@ export class DashboardComponent implements OnInit {
     active: ""
   }
   worldcounttable: any;
-
-
-
 
   public options: any = {
     chart: {
@@ -37,14 +33,14 @@ export class DashboardComponent implements OnInit {
       enabled: false
     },
     tooltip: {
-      formatter: function() {
+      formatter: function () {
         return 'x: ' + Highcharts.dateFormat('%e %b %y %H:%M:%S', this.x) + ' y: ' + this.y.toFixed(2);
       }
     },
     xAxis: {
       type: 'datetime',
       labels: {
-        formatter: function() {
+        formatter: function () {
           return Highcharts.dateFormat('%e %b %y', this.value);
         }
       }
@@ -63,30 +59,14 @@ export class DashboardComponent implements OnInit {
     ]
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
   ngOnInit() {
     Highcharts.chart('container', this.options);
     this.getCovidCount()
     this.getWorldCount()
   }
 
-
   getCovidCount() {
-
     this.service.getTimelinedata().subscribe((data) => {
-
-
       data = data.data
       this.count["updated_at"] = data[0]["updated_at"]
       this.count["deaths"] = data[0]["deaths"]
@@ -95,20 +75,12 @@ export class DashboardComponent implements OnInit {
       this.count["active"] = data[0]["active"]
     })
   }
-
-
-
-
-
+  
   getWorldCount() {
     this.service.getWorldCount().subscribe((data) => {
       this.worldcounttable = data.data;
     })
   }
-
-
-
-
 }
 
 
