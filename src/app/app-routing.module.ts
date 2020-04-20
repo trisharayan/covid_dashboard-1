@@ -8,7 +8,7 @@ const routes: Routes = [
 
 {path:"",component:DashboardComponent},
 {path:"home",component:DashboardComponent},
-{path:"USA",component:CountryComponent}
+{path:"USA",component:CountryComponent},
 
 
 ];

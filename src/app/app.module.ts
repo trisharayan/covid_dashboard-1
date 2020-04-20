@@ -10,7 +10,7 @@ import { CountryComponent } from './country/country.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    CountryComponent
+    CountryComponent,
   ],
   imports: [
     BrowserModule,
