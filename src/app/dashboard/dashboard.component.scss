@@ -99,7 +99,8 @@ table td {
 }
 
 table th {
-  font-size: 0.85em;
+  font-size: 1em;
+  font-weight: bolder;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -108,7 +109,9 @@ table tbody {
   display: block;
   max-height: 500px;
   overflow-y: scroll;
-
+  tr td:nth-child(1){
+    font-weight: bold;
+  }
 }
 
 table thead,
