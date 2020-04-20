@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
 import * as Highcharts from 'highcharts';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,8 @@ import * as Highcharts from 'highcharts';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private service: ApiService) { }
+
+  constructor(private service: ApiService,private router: Router) { }
   @ViewChild('container', { static: true }) container: ElementRef
 
   count = {
@@ -57,7 +59,6 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit() {
-
     this.getCovidCount()
     this.getWorldCount()
 

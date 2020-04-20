@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiurl:"https://cors-anywhere.herokuapp.com/corona-api.com/"
+  apiurl:"https://cors-anywhere.herokuapp.com/https://corona-api.com/",
+
+  statesurl:"https://cors-anywhere.herokuapp.com/https://energ.ee/covid19-us-api/states.json"
 };
 
 /*

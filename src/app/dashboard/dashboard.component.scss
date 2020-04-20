@@ -187,6 +187,17 @@ tbody tr {
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
+
+  iframe{
+
+
+    width: -webkit-fill-available;
+    height: 450px !important;
+
+  }
+
+
+
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr {
 		display: block;
@@ -232,6 +243,14 @@ only screen and (max-width: 760px),
 
 }
 
+
+iframe{
+
+
+  width: -webkit-fill-available;
+  height: 800px;
+
+}
 
 .cover-hide{
   height: 70px;

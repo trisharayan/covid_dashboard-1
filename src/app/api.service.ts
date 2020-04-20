@@ -9,16 +9,28 @@ export class ApiService {
 
   constructor(private http:HttpClient) {
       this.api_url= environment.apiurl
+      this.states_url= environment.statesurl
 
   }
   api_url:string;
+  states_url:string;
+
 
   getTimelinedata():Observable<any>{
-    return this.http.get(this.api_url+"timeline")
+    return this.http.get(this.api_url+"timeline");
   }
 
   getWorldCount():Observable<any>{
-    return this.http.get(this.api_url+"countries")
+    return this.http.get(this.api_url+"countries");
+  }
+
+  getUSAStatesCount():Observable<any>{
+    return this.http.get(this.states_url);
+  }
+
+
+  getCovidUSACount():Observable<any>{
+    return this.http.get(this.api_url+"countries/US");
   }
 
 

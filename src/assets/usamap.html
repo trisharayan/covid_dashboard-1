@@ -193,7 +193,6 @@
 
     data.forEach(element => {
 
-      console.log(element[0], resdata[element[0]][resdata[element[0]].length - 1].confirmed)
       element[1] = resdata[element[0]][resdata[element[0]].length - 1].confirmed
       element[2] = resdata[element[0]][resdata[element[0]].length - 1].deaths
       element[5] = parseInt(element[2]) + parseInt(element[1])
@@ -421,7 +420,6 @@
 
 
   })
-  chart.redraw()
 
 </script>
 
